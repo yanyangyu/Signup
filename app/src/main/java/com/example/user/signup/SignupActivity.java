@@ -5,7 +5,7 @@
 
 
 //   參考 http://kb4dev.com/article/how-to-connect-android-with-php,-mysql-and-json
-//   要有資料庫 php myadmin
+//   要有資料庫 phpmyadmin
 
 
 package com.example.user.signup;

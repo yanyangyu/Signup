@@ -5,7 +5,7 @@
 
 
 //   參考 http://kb4dev.com/article/how-to-connect-android-with-php,-mysql-and-json
-//   要有資料庫 phpmyadmin
+//   要有資料庫 phpmyadmin.
 
 
 package com.example.user.signup;
@@ -78,6 +78,8 @@ public class SignupActivity extends AsyncTask<String, Void, String> {
                     Toast.makeText(context, "Data inserted successfully. Signup successful.", Toast.LENGTH_SHORT).show();
                 } else if (query_result.equals("FAILURE")) {
                     Toast.makeText(context, "Data could not be inserted. Signup failed.", Toast.LENGTH_SHORT).show();
+                } else if (query_result.equals("Duplicate")) {
+                    Toast.makeText(context, "Data Duplicate. Signup failed.", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(context, "Couldn't connect to remote database.", Toast.LENGTH_SHORT).show();
                 }

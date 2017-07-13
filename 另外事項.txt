@@ -1,0 +1,15 @@
+參考網址 : https://www.facebook.com/%E6%9A%91%E6%9C%9FPHP%E8%88%87android%E6%8E%A8%E6%92%AD%E6%87%89%E7%94%A8%E7%8F%AD-439583493101312/?fref=ts
+
+1.要記得主機要用使用的電腦IP
+
+2.如果php不能夠連線，要去改連線許可
+
+ 這次用的是uniServerZ
+
+ 所以要更改www的 .htaccess檔 將Deny改成Allow
+
+3.也需要資料庫 這次用的是phpMyAdmin 
+
+ 不確定php是否有連接資料庫的話
+ 
+ 可以用127.0.0.1/signnup.php檢查是否有收到資料

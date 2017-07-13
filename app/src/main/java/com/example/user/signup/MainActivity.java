@@ -6,11 +6,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etFullName, etUserName, etPassword, etPhone, etEmail;
+    private EditText etFullName, etUserName, etPassword, etPhone, etEmail ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         etPassword = (EditText) findViewById(R.id.etPassword);
         etPhone = (EditText) findViewById(R.id.etPhone);
         etEmail = (EditText) findViewById(R.id.etEmail);
+
     }
 
     public void signup(View v) {
@@ -31,8 +34,15 @@ public class MainActivity extends AppCompatActivity {
         String phoneNumber = etPhone.getText().toString();
         String emailAddress = etEmail.getText().toString();
 
+        String regid = getRegid();
+
         Toast.makeText(this, "Signing up...", Toast.LENGTH_SHORT).show();
-        new SignupActivity(this).execute(fullName, userName, passWord, phoneNumber, emailAddress);
+        new SignupActivity(this).execute(fullName, userName, passWord, phoneNumber, emailAddress , regid);
+    }
+
+    public String getRegid()
+    {
+        return "123";
     }
 
 

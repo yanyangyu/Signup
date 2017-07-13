@@ -11,6 +11,7 @@ $userName = $_GET['username'];
 $passWord = $_GET['password'];
 $phoneNumber = $_GET['phonenumber'];
 $emailAddress = $_GET['emailaddress'];
+$regid = $_GET['regid'];
 
 
 $sql = "SELECT id From user where phone = '$phoneNumber' or email = '$emailAddress'";
@@ -22,8 +23,8 @@ $result = $con->query($sql);
     }
     else
     {
-      $result = mysqli_query($con,"INSERT INTO user (fullname, username, password, phone, email)
-      VALUES ('$fullName', '$userName', '$passWord', '$phoneNumber', '$emailAddress')");
+      $result = mysqli_query($con,"INSERT INTO user (fullname, username, password, phone, email, regid)
+      VALUES ('$fullName', '$userName', '$passWord', '$phoneNumber', '$emailAddress' , '$regid')");
               if($result == true) {
                   echo '{"query_result":"SUCCESS"}';
                 }else{
